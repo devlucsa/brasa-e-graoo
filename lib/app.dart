@@ -22,3 +22,10 @@ class BrasaEGraoApp extends StatelessWidget {
     );
   }
 }
+
+lass PaginaPrincipal extends StatefulWidget {
+  const PaginaPrincipal({super.key});
+
+  @override
+  State<PaginaPrincipal> createState() => _PaginaPrincipalState();
+}
