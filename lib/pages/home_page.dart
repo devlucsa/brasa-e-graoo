@@ -72,3 +72,16 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+class _Destaque extends StatelessWidget {
+  final String icone;
+  final String titulo;
+  const _Destaque({required this.icone, required this.titulo});
+
+  @override
+  Widget build(BuildContext context) => Chip(
+        avatar: Text(icone),
+        label: Text(titulo),
+        backgroundColor: Colors.white,
+        side: BorderSide.none,
+      );
+}
