@@ -39,3 +39,8 @@ class SiteHeader extends StatelessWidget {
       ),
     );
   }
+  TextStyle _estiloMenu(bool selecionado) => TextStyle(
+        color: selecionado ? laranja : marrom,
+        fontWeight: selecionado ? FontWeight.bold : FontWeight.normal,
+      );
+}
