@@ -29,3 +29,28 @@ lass PaginaPrincipal extends StatefulWidget {
   @override
   State<PaginaPrincipal> createState() => _PaginaPrincipalState();
 }
+class _PaginaPrincipalState extends State<PaginaPrincipal> {
+  int paginaAtual = 0;
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      body: SafeArea(
+        child: Column(
+          children: [
+            SiteHeader(
+              paginaAtual: paginaAtual,
+              aoSelecionar: (pagina) => setState(() => paginaAtual = pagina),
+            ),
+            Expanded(
+              child: paginaAtual == 0
+                  ? HomePage(abrirCardapio: () => setState(() => paginaAtual = 1))
+                  : const MenuPage(),
+            ),
+            const SiteFooter(),
+          ],
+        ),
+      ),
+    );
+  }
+}
